@@ -1,0 +1,10 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Grammar for standard commands
+ */
+
+grammar commands;
+
+public <standard_commands> =
+                      get help                   { help } ;

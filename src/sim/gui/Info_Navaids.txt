@@ -1,0 +1,23 @@
+Navaid = balise
+
+récupération d'une bdd depuis http://www.wayforward.net/avdata/
+table navaid :
+- jusqu'à 4000 balises
+- ident = identifiant : peut être un chiffre et une lettre seulement jusqu'à 3 lettres + format spécial I-XXX où X = lettre.
+- latitude, longitude
+- elevation = altitude
+- frequency -> OSEF
+- type (ressource qui a l'air complète: https://www.faa.gov/air_traffic/publications/atpubs/aim/aim0101.html)  : 
+  - NDB : Nondirectional Radio Beacon
+  - VOR : VHF Omni-directional Range
+  - TACAN : Tactical Air Navigation (balises peut-être militaires)
+  - VORTAC : VHF Omni-directional Range/Tactical Air Navigation 
+  - DME : Distance Measuring Equipment
+  - ILS : Instrument Landing System
+Un peu compliqué... faut voir si y'a une correspondance entre une certaine représentation (rond, carré, triangle par ex) et un certain type.
+
+- magvar = magnetic variation -> OSEF
+
+Types de cartes:
+-SIA: navigation française, aviation civile/vols affiares
+-JEPPESEN: vols commerciaux

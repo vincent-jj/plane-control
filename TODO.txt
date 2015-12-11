@@ -1,0 +1,13 @@
+Sinon pour le code, il y a encore plein de trucs à faire dont:
+- gestion des collisions des avions
+(- synthèse vocale)
+- reconaissance vocale
+- ajout d'une zone dans la gui pour les retours de commande
+- verifier le compteur des avions (décolé/ateris/perdus) et le temps
+- echelle fond de carte
+
+Et plutot sur les bugs à corriger que sur les nouveaux trucs à implémenter:
+- scroll
+
+Il faudrait savoir si on fait :
+- des tests (on en a déjà un peu mais pas énormément) 

@@ -1,0 +1,36 @@
+Objective
+Controllers must route arriving and departing aircraft both safely and accurately. 
+
+Safe Separation Standards
+Your job is to ensure that aircraft are separated by either of the following criteria:
+            Laterally — 3 miles
+            Vertically — 1,000 feet 
+
+Commands
+All commands are in the format: PlaneID + Command + [Command String]
+
+— Take off:  PlaneID t (note: departing aircraft must first be assigned an altitude)
+— Landing:  PlaneID l [runway]
+— Clearances: PlaneID c [command string] (it can be a runway, a station, an altitude, or a heading)
+
+Command String format
+— PlaneId: 3 letters and 2 digits AA000
+— Stations: Letters and digit
+— Runways: 2 digits and a letter (the two digits being the heading of the runway divided by 10)
+— Height: 1/1000 of the wanted height) (2 for 2000 feet)
+— Heading: 3 digits
+— Speed: Number
+
+Examples
+— AR46 c 10
+— AR46 t
+
+— FR27 l 06R
+
+— GE55 c AX42 (the plane goes toward the AX42 station)
+
+— ZT67 c 12 (the plane climbs to 12000 feet)
+
+— HY88 c 090 (the plane takes the heading to 90°)
+
+— PM12 s 200

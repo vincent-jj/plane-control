@@ -1,0 +1,97 @@
+#JSGF V1.0;
+
+grammar plane;
+
+import <commands.standard_commands>;
+
+public <commands> = <standard_commands> ;
+
+public <plane> = (<id>|<radioid>) (take off|t)  {take} |
+       	       	 (<id>|<radioid>) (landing|l) (<balise>|<radiobalise>) {landing}|
+		 (<id>|<radiobalise>) (clearance|c) (<balise> | <radiobalise>) {movingTo}|
+		 (<id>|<radiobalise>) (clearance|c) <altitude> {changingAltitude}|
+		 (<id>|<radiobalise>) (clearance|c) <angle> {changingAngle}|
+		 (<id>|<radiobalise>) (speed|s) <speed> {changingSpeed} ;
+
+<digits> = oh |
+	   zero|
+	   one|
+	   two|
+	   three|
+	   four|
+	   five|
+	   six|
+	   seven|
+	   eight|
+	   nine;
+
+<letter> =  a |
+	    b |
+	    c |
+	    d |
+	    e |
+	    f |
+	    g |
+	    h |
+	    i |
+	    j |
+	    k |
+	    l |
+	    m |
+	    n |
+	    o |
+	    p |
+	    q |
+	    r |
+	    s |
+	    t |
+	    u |
+	    v |
+	    w |
+	    x |
+	    y | 
+	    z ;
+
+<radioletter> = alpha |
+				bravo |
+				charlie |
+				delta |
+				echo |
+				fox |
+				golf |
+				hotel |
+				india |
+				juliet |
+				kilo |
+				lima |
+				mike |
+				november |
+				oscar |
+				papa |
+				quebec |
+				romeo |
+				sierra |
+				tango |
+				uniform |
+				victor |
+				whiskey |
+				X-ray |
+				yankee |
+				zulu;
+		
+<number> = <digits>+ ;
+
+<balise> = <letter> <letter>+ ;
+
+<radiobalise> = <radioletter> <radioletter>+ ;
+
+<id> = <letter> <letter> <number> ;
+
+<radioid> = <radioletter> <radioletter> <number> ;
+
+<angle> = <digits> <digits> <digits>;
+
+<altitude> = <digits>+;
+
+<speed> = <digits>+;
+		  
