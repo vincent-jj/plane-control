@@ -1,0 +1,14 @@
+# emacs autosave
+*~
+
+# build files
+build/*
+*.class
+
+/bin/
+/doc/
+/sphinx/
+
+#vim configuration
+.syntastic_javac_config
+/src/nbproject/private/
